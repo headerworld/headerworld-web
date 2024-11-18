@@ -1,0 +1,32 @@
+@use '../utilities/' as u;
+
+p{
+    font-size:u.rem(16);
+    @include u.breakpoint-max(small){
+        font-size: 14px;
+    }
+    // @include u.breakpoint-min(medium){ 
+    //     font-size: 1.2rem;
+    // }
+}
+
+// h2{
+//     font-size:clamp(u.rem(28), u.rem(16) + 2vw , u.rem(36));
+// }
+
+
+h2{
+    font-size: 26px;
+    @include u.breakpoint-max(small){
+        font-size: 18px;
+
+    }
+}
+
+h1{
+    font-size: 56px;
+    text-align: center;
+    @include u.breakpoint-max(small){
+        font-size: 36px;
+    }
+}
