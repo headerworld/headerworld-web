@@ -21,12 +21,76 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css?v=1.8" />
 
+  <style>
+    .link-buy-token {
+      background-color: #F5BB0A;
+      padding: 5px;
+      border-radius: 10px;
+      color: black;
+      transition: all 0.3s ease;
+    }
 
+    .link-buy-token:hover {
+      background-color: #f3cc58;
+      padding: 10px;
+      border-radius: 15px;
+      color: black;
+    }
 
-  <title>Get Ready For A Header Fight With $CHIC</title>
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-content {
+      color: black;
+      font-size: 20px;
+      background: #F5BB0A;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .popup-content button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .popup-content button:hover {
+      background-color: #b68b0a;
+    }
+  </style>
+
+  <title>Get Ready For A Header Fight With $HEADER</title>
 </head>
 
 <body>
+
+  <!-- Popup Modal -->
+  <div id="comingSoonPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <h2>Coming Soon!</h2>
+      <p>Get ready to buy <strong>$HEADER</strong>.</p>
+      <p>Prepare your Solana wallet and mark your calendar. We launch on <strong>20th December</strong>!</p>
+      <button onclick="closeComingSoonPopup()">Close</button>
+    </div>
+  </div>
+
+
   <main>
     <header>
       <nav>
@@ -42,6 +106,9 @@
           <!-- <li><a href="#project" class="link">PROJECT</a></li> -->
           <li><a href="#tokenomics" class="link">TOKENOMICS</a></li>
           <li><a href="#game" class="link">PRESALE</a></li>
+          
+         <li> <a href="javascript:void(0)" class="link-buy-token" onclick="showComingSoonPopup()">BUY TOKEN</a></li>
+
           <!-- <li><a href="#roadmap" class="link">ROADMAP</a></li> -->
         </ul>
 
@@ -87,7 +154,7 @@
         </picture>
       </div>
 
- 
+
     </div>
     <section id="about" class="about-sec">
       <div class="container">
@@ -111,7 +178,9 @@
               The Origin
             </h1>
             <p data-aos="fade-left">
-              During a debate at a Mar-a-Lago dinner, Trump claims his chicken parm is “the best in the world,” while Elon suggests genetically engineered chickens for Mars. The conversation spirals into memes, and fans demand a meme token.
+              During a debate at a Mar-a-Lago dinner, Trump claims his chicken parm is “the best in the world,” while
+              Elon suggests genetically engineered chickens for Mars. The conversation spirals into memes, and fans
+              demand a meme token.
             </p>
             <p data-aos="fade-left">
 
@@ -144,21 +213,27 @@
               <img src="./assets/images/mobile/chicmob1.png" alt="mob one" />
               <h1>THE ORIGIN</h1>
               <p>
-                During a debate at a Mar-a-Lago dinner, Trump claims his chicken parm is “the best in the world,” while Elon suggests genetically engineered chickens for Mars. The conversation spirals into memes, and fans demand a meme token. 
+                During a debate at a Mar-a-Lago dinner, Trump claims his chicken parm is “the best in the world,” while
+                Elon suggests genetically engineered chickens for Mars. The conversation spirals into memes, and fans
+                demand a meme token.
               </p>
             </div>
             <div class="first-diagram">
               <img src="./assets/images/mobile/chicmob2.png" alt="mob one" />
               <h1>THE CHICKEN-MARS REVOLUTION</h1>
               <p>
-                In a satirical alternate universe, Donald Trump and Elon Musk join forces to “Make Crypto Great Again” and “Take It to Mars.” They celebrate their larger-than-life personas, visionary ambitions, and an unexplainable obsession with chickens. The idea? Chickens are the perfect metaphor for success: they hustle (lay eggs), they adapt (survive on Earth and Mars), and they represent “huge” opportunities.
+                In a satirical alternate universe, Donald Trump and Elon Musk join forces to “Make Crypto Great Again”
+                and “Take It to Mars.” They celebrate their larger-than-life personas, visionary ambitions, and an
+                unexplainable obsession with chickens. The idea? Chickens are the perfect metaphor for success: they
+                hustle (lay eggs), they adapt (survive on Earth and Mars), and they represent “huge” opportunities.
               </p>
             </div>
             <div class="first-diagram">
               <img src="./assets/images/mobile/chicmob3.png" alt="mob one" />
               <h1>THE GREATEST DEAL</h1>
               <p>
-                The token, $HEADER, combines Trump’s flair for “the greatest deals” and Elon’s obsession with taking everything, even chickens, to Mars
+                The token, $HEADER, combines Trump’s flair for “the greatest deals” and Elon’s obsession with taking
+                everything, even chickens, to Mars
               </p>
             </div>
           </div>
@@ -259,7 +334,7 @@
       <h2 data-aos="fade-up" data-aos-delay="500">
         <span style="display: inline-block">
           <p>Total Supply:</p>
-        </span> 1 Trillion $Header Token 
+        </span> 1 Trillion $Header Token
       </h2>
 
       <h2 data-aos="fade-up" data-aos-delay="500">
@@ -332,7 +407,7 @@
           <p>Hard Cap:</p>
         </span> 3000 SOL
 
-        
+
       </h2>
 
       <h2 data-aos="fade-up" data-aos-delay="500">
@@ -350,12 +425,12 @@
       <h2 data-aos="fade-up" data-aos-delay="500">
         <span style="display: inline-block">
           <p>Minimum Purchase: </p>
-        </span>  0.05 SOL
+        </span> 0.05 SOL
       </h2>
 
 
       <h2 data-aos="fade-up" data-aos-delay="500" style="text-align: center;">
-       Surprise event will be announced once hard cap reached.
+        Surprise event will be announced once hard cap reached.
       </h2>
 
 
@@ -420,7 +495,7 @@
 
             <a href="https://x.com/headerwld" target="_blank" class="soc-logo"><img
                 src="./assets/images/icons/twitter.svg" />
-              </a>
+            </a>
 
 
             <div class="ComChannel">
@@ -439,7 +514,8 @@
         </div>
         <div class="footer-content">
           <p>
-            Disclaimer: $HEADER is a memecoin that does not have any value and should not be considered a means for financial gain. This token is solely designed for fun and is not associate or partner with any figure.
+            Disclaimer: $HEADER is a memecoin that does not have any value and should not be considered a means for
+            financial gain. This token is solely designed for fun and is not associate or partner with any figure.
           </p>
           <p class="copyright">© 2024-2025 HEADER WORLD. All rights reserved.</p>
         </div>
@@ -520,6 +596,17 @@
           copiedNotif.style.display = "none";
         }, 2000);
       });
+  </script>
+
+  <script>
+    function showComingSoonPopup() {
+      document.getElementById('comingSoonPopup').style.display = 'flex';
+    }
+
+    function closeComingSoonPopup() {
+      document.getElementById('comingSoonPopup').style.display = 'none';
+    }
+
   </script>
 </body>
 
