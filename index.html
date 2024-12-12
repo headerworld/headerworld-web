@@ -51,6 +51,7 @@
     }
 
     .popup-content {
+      width: 30%;
       color: black;
       font-size: 20px;
       background: #F5BB0A;
@@ -59,6 +60,20 @@
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
+
+    @media only screen and (max-width: 600px) {
+      .popup-content {
+      width: 100%;
+      color: black;
+      font-size: 20px;
+      background: #F5BB0A;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
 
     .popup-content button {
       margin-top: 10px;
@@ -73,6 +88,13 @@
     .popup-content button:hover {
       background-color: #b68b0a;
     }
+
+
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
   </style>
 
   <title>Get Ready For A Header Fight With $HEADER</title>
@@ -83,6 +105,7 @@
   <!-- Popup Modal -->
   <div id="comingSoonPopup" class="popup-overlay" style="display: none;">
     <div class="popup-content">
+      <img src="./assets/images/3.png" alt="Coming Soon" class="responsive-img" />
       <h2>Coming Soon!</h2>
       <p>Get ready to buy <strong>$HEADER</strong>.</p>
       <p>Prepare your Solana wallet and mark your calendar. We launch on <strong>20th December</strong>!</p>
@@ -106,8 +129,8 @@
           <!-- <li><a href="#project" class="link">PROJECT</a></li> -->
           <li><a href="#tokenomics" class="link">TOKENOMICS</a></li>
           <li><a href="#game" class="link">PRESALE</a></li>
-          
-         <li> <a href="javascript:void(0)" class="link-buy-token" onclick="showComingSoonPopup()">BUY TOKEN</a></li>
+
+          <li> <a href="javascript:void(0)" class="link-buy-token" onclick="showComingSoonPopup()">BUY TOKEN</a></li>
 
           <!-- <li><a href="#roadmap" class="link">ROADMAP</a></li> -->
         </ul>
@@ -489,7 +512,7 @@
             <!-- <li><a href="#project" class="link">PROJECT</a></li> -->
             <li><a href="#tokenomics" class="link">TOKENOMICS</a></li>
             <li><a href="#game" class="link">PRESALE</a></li>
-         <li> <a href="javascript:void(0)" class="link-buy-token" onclick="showComingSoonPopup()">BUY TOKEN</a></li>
+            <li> <a href="javascript:void(0)" class="link-buy-token" onclick="showComingSoonPopup()">BUY TOKEN</a></li>
 
             <!-- <li><a href="#roadmap" class="link">ROADMAP</a></li> -->
           </ul>
