@@ -118,14 +118,31 @@
 <body>
 
   <!-- Popup Modal -->
-  <div id="comingSoonPopup" class="popup-overlay" style="display: none;">
-    <div class="popup-content">
-      <img src="./assets/images/3.png" alt="Coming Soon" class="responsive-img" />
-      <h2>Coming Soon!</h2>
-      <p>Get ready to buy <strong>$HEADER</strong>.</p>
-      <p>Prepare your Solana wallet and mark your calendar. We launch on <strong>20th December</strong>!</p>
-      <button onclick="closeComingSoonPopup()">Close</button>
+  <div id="comingSoonPopup" class="popup-overlay"
+    style="display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); align-items: center; justify-content: center;">
+
+    <div class="popup-content"
+      style="position: relative; background: #ffa601; padding: 20px; border-radius: 10px; text-align: center;">
+      <a href="#" onclick="closeComingSoonPopup()"
+        style="position: absolute; top: 10px; right: 10px; text-decoration: none; font-size: 18px; font-weight: bold; color: #000;">&times;</a>
+
+      <a href="https://buy.header.world/" target="_blank">
+        <img src="./assets/images/3.png" alt="Coming Soon" class="responsive-img"
+          style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+      </a>
+      <h2>Presale Starts Now!</h2>
+      <p style="margin-bottom: 10px;">Get ready to <strong>“Flap”</strong> your way into Header world!.</p>
+      
+      <a style="background-color: black; 
+      padding: 10px; 
+      margin-top: 5px;
+      border-radius: 6px;" 
+      href="https://buy.header.world/" 
+      target="_blank">
+      GET $HEADER NOW!
+    </a>
     </div>
+
   </div>
 
 
